@@ -1,18 +1,24 @@
-package com.example.problemsolving.factorymethodpattern
+package com.example.problemsolving.facadedesignpattern
 
 class VehicleFactory {
 
-    val plane = Plane()
-    val car = Car()
 
-    fun getVehicle(type :String): VehicleInterface {
+    var car = Car()
+    var plane = Plane()
 
-        return if (type=="Plane")
-            plane
-        else
-            car
 
+    fun makeCar(wheels: Int, passengers: Int, gas: Boolean) {
+        car.setNumberOfWheels(wheels)
+        car.setNumberOfPassengers(passengers)
+        car.hasGas(gas)
+    }
+
+    fun makePlane(wheels: Int, passengers: Int, gas: Boolean) {
+        plane.setNumberOfWheels(wheels)
+        plane.setNumberOfPassengers(passengers)
+        plane.hasGas(gas)
 
     }
+
 
 }

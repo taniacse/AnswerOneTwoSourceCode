@@ -1,6 +1,6 @@
-package com.example.problemsolving.factorymethodpattern
+package com.example.problemsolving.facadedesignpattern
 
-interface VehicleInterface {
+interface Vehicle {
 
     fun setNumberOfWheels(wheel:Int)
     fun setNumberOfPassengers(passenger:Int)

@@ -1,23 +1,17 @@
-package com.example.problemsolving.factorymethodpattern
+package com.example.problemsolving.facadedesignpattern
 
 
 fun main(){
 
     val vehicleFactory = VehicleFactory()
-    val plane = vehicleFactory.getVehicle("Plane")
-    val  car = vehicleFactory.getVehicle("Car")
+    vehicleFactory.makeCar(4,5,true)
+    vehicleFactory.makePlane(10,100,false)
 
-    plane.setNumberOfPassengers(100)
-    plane.setNumberOfWheels(20)
-    plane.hasGas(false)
-
-    car.setNumberOfPassengers(100)
-    car.setNumberOfWheels(20)
-    car.hasGas(true)
+    val  car = vehicleFactory.car
+    val plane = vehicleFactory.plane
 
 
-
-
-
+    println("Car property passenger:${car.passenger} wheels: ${car.wheels} Gas: ${car.hasGas}")
+    println("Plane property passenger:${plane.passenger} wheels: ${plane.wheels} Gas: ${plane.hasGas}")
 
 }

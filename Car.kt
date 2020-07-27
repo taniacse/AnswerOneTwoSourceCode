@@ -1,6 +1,8 @@
-package com.example.problemsolving.factorymethodpattern
+package com.example.problemsolving.facadedesignpattern
 
-class Car : VehicleInterface {
+
+
+class Car : Vehicle {
 
     var wheels = 0
     var passenger = 0
